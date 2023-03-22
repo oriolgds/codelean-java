@@ -14,9 +14,9 @@ public class Array6 {
 		int[] result = new int[5];
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Start reading array");
-		for (int i : result) {
+		for (int i = 0; i < result.length; i++) {
 			System.out.print("Insert integer value: ");
-			i = sc.nextInt();
+			result[i] = sc.nextInt();
 		}
 		System.out.println("Finish reading array");
 		return result;
@@ -32,7 +32,7 @@ public class Array6 {
 		float v3 = 0.0f;
 		v3 = Average(arr3);
 		System.out.println("The average of the first array is " + v1);
-		System.out.println("The average of the second array is " + Average(arr2));
-		System.out.println("The average of the third array is " + Average(arr3));
+		System.out.println("The average of the second array is " + v2);
+		System.out.println("The average of the third array is " + v3);
 	}
 }

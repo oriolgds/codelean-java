@@ -1,7 +1,12 @@
 import java.util.Scanner;
 public class Words3 {
     private static String removeWords(String in){
-        return in.substring(in.indexOf(" ") + 1, in.lastIndexOf(" "));
+        if(in.indexOf(" ") == in.lastIndexOf(" ")){
+            return in;
+        }
+        else {
+           return in.substring(in.indexOf(" ") + 1, in.lastIndexOf(" ")); 
+        }        
     }  
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

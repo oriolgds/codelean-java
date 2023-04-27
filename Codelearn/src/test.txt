@@ -1,1 +1,0 @@
-Las clases son esquemas que sirven para crear objetos y los objetos se crean a partir de estas clases. 

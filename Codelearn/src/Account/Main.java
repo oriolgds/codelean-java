@@ -5,7 +5,6 @@ public class Main {
 
         Account ac1 = new Account ( "User 1" );
 
-
         Account ac2 = new Account ( "User 2", 300 );
 
         // Cash deposit
@@ -16,7 +15,7 @@ public class Main {
 
         // Cash withdrawal
 
-        ac1.withdrawal ( 500 );
+        ac1.withdrawal ( 300 );
 
         ac2.withdrawal ( 100 );
 

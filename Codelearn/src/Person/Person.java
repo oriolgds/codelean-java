@@ -5,7 +5,7 @@ public class Person {
     public int _age;
     public String _IDCardNumber;
     public char _sex;
-    private int _weight;
+    private double _weight;
     private double _height;
     Person(){
         _name = "Oriol";
@@ -23,7 +23,7 @@ public class Person {
         _weight = 65;
         _height = 1.80;
     }
-    Person(String name, int age, char sex, String IDCardNumber, int weight, int height){
+    Person(String name, int age, char sex, String IDCardNumber, double weight, double height){
         _name = name;
         _age = age;
         _sex = sex;
@@ -32,7 +32,7 @@ public class Person {
         _height = height;
     }
     int icmCalcul(){
-        double icm = _weight / _height * _height;
+        double icm = _weight / (_height * _height);
         if(icm <= 16){
             return -1;
         } else if(icm > 16 && icm <= 16.99){
@@ -73,7 +73,9 @@ public class Person {
         }
     }
     public void isLegalAgeToString(){
-
+        String c = "Yes";
+        if(_age < 18) c = "No";
+        System.out.println(_name + " is legal age? " + c);
     }
     private String sexToString(){
         if(_sex == 'M'){
@@ -85,20 +87,13 @@ public class Person {
         }
     }
     public String toString(){
-        System.out.println("""
-        Person data:
-        
-        Name:\s""" + _name + """
-        
-        Age:\s""" + _age + """
-        
-        Sex:\s""" + sexToString() + """
-        
-        IDCard:\s""" + _IDCardNumber + """
-        
-        Weight:\s""" + _weight + """
-        
-        Height:\s""" + _height);
+        System.out.println("Person data:");
+        System.out.println("Name: " + _name);
+        System.out.println("Age: " + _age);
+        System.out.println("Sex: " + sexToString());
+        System.out.println("IDCard: " + _IDCardNumber);
+        System.out.println("Weight: " + _weight);
+        System.out.println("Height: " + _height);
         return null;
     }
     public boolean checkSex(char sex){

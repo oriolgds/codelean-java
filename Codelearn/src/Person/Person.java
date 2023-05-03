@@ -51,12 +51,27 @@ public class Person {
             return 7;
         }
     }
+    void icmPrint(){
+        System.out.println("ICM for person " + _name + " is " + icmCalcul());
+    }
+    void isAMan(){
+        System.out.println();
+    }
     boolean isLegalAge(){
         if(_age >= 18){
             return true;
         }
         else {
             return false;
+        }
+    }
+    private String sexToString(){
+        if(_sex == 'M'){
+            return "Male";
+        } else if(_sex == 'F'){
+            return "Female";
+        } else {
+            return "Unknown";
         }
     }
     public String toString(){

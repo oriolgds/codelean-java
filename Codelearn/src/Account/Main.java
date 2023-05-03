@@ -4,7 +4,7 @@ public class Main {
     public static void main ( String[] args ) {
 
         Account ac1 = new Account ( "User 1" );
-        
+
 
         Account ac2 = new Account ( "User 2", 300 );
 

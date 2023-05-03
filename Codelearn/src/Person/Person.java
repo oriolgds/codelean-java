@@ -10,7 +10,7 @@ public class Person {
     Person(){
         _name = "Oriol";
         _age = 15;
-        _sex = M;
+        _sex = 'M';
         _IDCardNumber = "000000000X";
         _weight = 65;
         _height = 1.80;

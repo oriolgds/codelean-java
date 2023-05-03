@@ -55,15 +55,25 @@ public class Person {
         System.out.println("ICM for person " + _name + " is " + icmCalcul());
     }
     void isAMan(){
-        System.out.println();
+        if(_sex == 'M'){
+            System.out.println(_name + " is a man? Yes, he is");
+        } else if(_sex == 'F'){
+            System.out.println(_name + " is a man? No, she is not");
+        }
+        else {
+            System.out.println(_name + " is a man? We do not know");
+        }
     }
-    boolean isLegalAge(){
+    private boolean isLegalAge(){
         if(_age >= 18){
             return true;
         }
         else {
             return false;
         }
+    }
+    public void isLegalAgeToString(){
+
     }
     private String sexToString(){
         if(_sex == 'M'){
@@ -82,7 +92,7 @@ public class Person {
         
         Age:\s""" + _age + """
         
-        Sex:\s""" + _sex + """
+        Sex:\s""" + sexToString() + """
         
         IDCard:\s""" + _IDCardNumber + """
         
@@ -92,8 +102,6 @@ public class Person {
         return null;
     }
     public boolean checkSex(char sex){
-        if(sex == _sex){
-            return true;
-        } return false;
+        return sex == _sex;
     }
 }

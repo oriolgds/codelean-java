@@ -29,18 +29,21 @@ public class Electrodomestic {
         this._weight = weight;
     }
     Electrodomestic(){
+        super();
         _basePrice = 100;
         _weight = 5;
         _energyConsumption = 'F';
         _color = "white";
     }
     Electrodomestic(double price, double weight){
+        super();
         _basePrice = price;
         _weight = weight;
         _energyConsumption = 'F';
         _color = "white";
     }
     Electrodomestic(double price, double weight, char energyConsumption, String color){
+        super();
         _weight = weight;
         _energyConsumption = this.checkEnergyConsumption(energyConsumption);
         _color = this.checkColor(color);
@@ -84,7 +87,7 @@ public class Electrodomestic {
     }
     String checkColor(String color){
         String[] colorsArray = {"white", "black", "red", "blue", "grey"};
-        List<String> colors = List.of(Arrays.toString(colorsArray));
+        List<String> colors = Arrays.asList(Arrays.toString(colorsArray));
         if(colors.contains(color)){
             return color;
         } else {

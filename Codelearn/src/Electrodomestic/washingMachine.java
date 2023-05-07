@@ -1,11 +1,11 @@
 package Electrodomestic;
 
 public class washingMachine extends Electrodomestic {
-	private static double _load = 5;
+	private double _load;
 	public double get_load(){
 		return _load;
 	} public void set_load(double load){
-		_load = load;
+		this._load = load;
 	}
 	washingMachine(){
 		super();
@@ -37,7 +37,7 @@ public class washingMachine extends Electrodomestic {
 		System.out.println("Color: " + this.get_color());
 		System.out.println("EnergyConsumption: " + this.get_energyConsumption());
 		System.out.println("Weight: " + this.get_weight());
-		System.out.println("Load: " + _load);
+		System.out.println("Load: " + this.get_load());
 		System.out.println("************************************************");
 		return null;
 	}

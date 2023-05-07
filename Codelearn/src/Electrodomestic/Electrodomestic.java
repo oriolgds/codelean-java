@@ -2,6 +2,7 @@ package Electrodomestic;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Electrodomestic {
     private double _basePrice;
@@ -92,7 +93,7 @@ public class Electrodomestic {
     String checkColor(String color){
         String[] colorsArray = {"white", "black", "red", "blue", "grey"};
         List<String> colors = Arrays.asList(Arrays.toString(colorsArray));
-        if(colors.contains(color)){
+        if(Objects.equals(color, "black") || Objects.equals(color, "red") || Objects.equals(color, "blue") || Objects.equals(color, "grey")){
             return color;
         } else {
             return "white";

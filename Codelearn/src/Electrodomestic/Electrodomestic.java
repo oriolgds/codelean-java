@@ -30,24 +30,28 @@ public class Electrodomestic {
     }
     Electrodomestic(){
         super();
-        _basePrice = 100;
         _weight = 5;
         _energyConsumption = 'F';
         _color = "white";
+        _basePrice = finalPrice(100);
+        this.toString();
     }
     Electrodomestic(double price, double weight){
         super();
-        _basePrice = price;
+
         _weight = weight;
         _energyConsumption = 'F';
         _color = "white";
+        _basePrice = finalPrice(price);
+        this.toString();
     }
-    Electrodomestic(double price, double weight, char energyConsumption, String color){
+    Electrodomestic(double price, String color, char energyConsumption, double weight){
         super();
         _weight = weight;
         _energyConsumption = this.checkEnergyConsumption(energyConsumption);
         _color = this.checkColor(color);
-        _basePrice = this.finalPrice(_basePrice);
+        _basePrice = this.finalPrice(price);
+        this.toString();
 
     }
     double finalPrice(double price){

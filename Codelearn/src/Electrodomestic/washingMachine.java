@@ -1,11 +1,11 @@
 package Electrodomestic;
 
 public class washingMachine extends Electrodomestic {
-	private double _load;
+	private static double _load = 5;
 	public double get_load(){
 		return _load;
 	} public void set_load(double load){
-		this._load = load;
+		_load = load;
 	}
 	washingMachine(){
 		super();

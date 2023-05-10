@@ -41,14 +41,14 @@ public class Electrodomestic {
         _weight = weight;
         _energyConsumption = 'F';
         _color = "white";
-        _basePrice = finalPrice(price);
+        _basePrice = price;
     }
     Electrodomestic(double price, String color, char energyConsumption, double weight){
         super();
         _weight = weight;
         _energyConsumption = this.checkEnergyConsumption(energyConsumption);
         _color = this.checkColor(color);
-        _basePrice = this.finalPrice(price);
+        _basePrice = price;
     }
     double finalPrice(double price){
         char l = this._energyConsumption;

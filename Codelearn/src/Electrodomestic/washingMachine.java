@@ -9,20 +9,21 @@ public class washingMachine extends Electrodomestic {
 	}
 	washingMachine(){
 		super();
-		finalPrice(get_basePrice());
+		this._load = 5;
 	}
 	washingMachine(double price, double weight){
 		super(price, weight);
-		finalPrice(get_basePrice());
+		this._load = 5;
+
 	}
 	washingMachine(double price, double weight, char energyConsumption, String color){
 		super(price, color, energyConsumption, weight);
-		finalPrice(get_basePrice());
+		this._load = 5;
+
 	}
 	washingMachine(double price, String color, char energyConsumption, double weight, double load){
 		super(price, color, energyConsumption, weight);
-		set_load(load);
-		finalPrice(get_basePrice());
+		_load = load;
 	}
 	double finalPrice(double price){
 		price = super.finalPrice(price);
@@ -37,7 +38,7 @@ public class washingMachine extends Electrodomestic {
 		System.out.println("Color: " + this.get_color());
 		System.out.println("EnergyConsumption: " + this.get_energyConsumption());
 		System.out.println("Weight: " + this.get_weight());
-		System.out.println("Load: " + this.get_load());
+		System.out.println("Load: " + _load);
 		System.out.println("************************************************");
 		return null;
 	}

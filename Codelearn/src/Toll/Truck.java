@@ -1,6 +1,6 @@
 package Toll;
 
-public class Truck {
+public class Truck extends Vehicle {
     Truck(){}
     public void payToll(){
         System.out.println("I am a truck");

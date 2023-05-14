@@ -1,7 +1,10 @@
 package Figure;
 
 public class Triangle extends Figure {
-    public String fname = "triangle";
+    @Override
+    public String fname(){
+        return "triangle";
+    }
     Triangle(double height, double width){
         super(height, width);
     }

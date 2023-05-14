@@ -1,7 +1,10 @@
 package Figure;
 
 public class Circle extends Figure {
-    public String fname = "circle";
+    @Override
+    public String fname(){
+        return "circle";
+    }
     Circle(double height, double width){
         super(height, width);
     }

@@ -1,7 +1,7 @@
 package Figure;
 
 public abstract class Figure {
-    public String fname = "figure";
+    public abstract String fname();
     public double get_height() {
         return _height;
     }

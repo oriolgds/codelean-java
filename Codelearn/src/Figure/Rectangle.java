@@ -1,7 +1,10 @@
 package Figure;
 
 public class Rectangle extends Figure {
-    public String fname = "rectangle";
+    @Override
+    public String fname(){
+        return "rectangle";
+    }
     Rectangle(double height, double width){
         super(height, width);
     }

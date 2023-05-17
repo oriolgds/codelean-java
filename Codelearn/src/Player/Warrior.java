@@ -3,11 +3,24 @@ package Player;
 public class Warrior extends Player {
     Warrior(String _playerName, String _characterName) {
         super(_playerName, _characterName);
+        this._CP = _BaseCP;
+        this._DP = _BaseDP;
     }
 
     Warrior(String _playerName, String _characterName, int _baseLevel, int _baseXP, int _baseHP) {
         super(_playerName, _characterName, _baseLevel, _baseXP, _baseHP);
+        this._CP = _BaseCP;
+        this._DP = _BaseDP;
     }
+    Warrior(String _playerName, String _characterName, int _baseLevel, int _baseXP, int _baseHP, int _CP, int _DP) {
+        super(_playerName, _characterName, _baseLevel, _baseXP, _baseHP);
+        this._CP = _CP;
+        this._DP = _DP;
+    }
+    protected int _CP;
+    protected int _DP;
+    protected static final int _BaseCP = 1;
+    protected static final int _BaseDP = 1;
 
     public static int get_BaseCP() {
         return _BaseCP;
@@ -33,14 +46,9 @@ public class Warrior extends Player {
         this._DP = _DP;
     }
 
-    protected int _CP;
-    protected int _DP;
-    protected static final int _BaseCP = 1;
-    protected static final int _BaseDP = 1;
-
-
     @Override
     public void gainXp(int value) {
+        XP += value;
         int c = level * XP;
         if(c > level * 1000 * level / 4){
             level++;

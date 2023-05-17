@@ -46,4 +46,16 @@ public class Wizard extends Player{
             this._HP += 5;
         }
     }
+    public boolean castSpell(int spellDifficulty, int spellCost){
+        return true;
+    }
+
+    public String toString() {
+        super.toString();
+        System.out.println("Character type: Wizard");
+        System.out.println("Magical Power: " + this.MP);
+        System.out.println("Maximum Magical Points: " + this.MPoints);
+        System.out.println("Available Magical Points: " + this.avaibleMPoints);
+        return null;
+    }
 }

@@ -44,6 +44,7 @@ public class Burglar extends Player{
 
     public String toString() {
         super.toString();
+        System.out.println("Character type: Burglar");
         System.out.println("Agility Power: " + _AP);
         return null;
     }

@@ -80,7 +80,7 @@ public abstract class Player {
         this.XP = _baseXP;
         this._HP = _baseHP;
     }
-    public abstract void gainXp(int value);
+    public abstract void gainXP(int value);
     public String toString(){
         System.out.println("Player Name: " + this._playerName);
         System.out.println("Character Name: " + this._characterName);

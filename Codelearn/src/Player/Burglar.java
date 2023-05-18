@@ -23,7 +23,7 @@ public class Burglar extends Player{
     }
 
     @Override
-    public void gainXp(int value) {
+    public void gainXP(int value) {
         this.XP += value;
         int c = level * XP;
         if(c > level * 1000){

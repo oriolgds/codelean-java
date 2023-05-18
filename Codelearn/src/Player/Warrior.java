@@ -47,7 +47,7 @@ public class Warrior extends Player {
     }
 
     @Override
-    public void gainXp(int value) {
+    public void gainXP(int value) {
         XP += value;
         int c = level * XP;
         if(c > level * 1000 * level / 4){

@@ -36,7 +36,7 @@ public class Wizard extends Player{
     }
 
     @Override
-    public void gainXp(int value) {
+    public void gainXP(int value) {
         XP += value;
         int c = level * XP;
         if(c > level * 1000 * level / 2){
@@ -47,7 +47,32 @@ public class Wizard extends Player{
         }
     }
     public boolean castSpell(int spellDifficulty, int spellCost){
-        return true;
+        if(this.avaibleMPoints >= spellCost){
+            avaibleMPoints -= spellCost;
+            if(this.MP > spellDifficulty * 2){
+                System.out.println("Spell casting succeeded");
+                return true;
+            }
+            else {
+                System.out.println("Spell casting failed");
+            }
+        }
+        else {
+            System.out.println("Not enough magical energy");
+        }
+        return false;
+    }
+    public void rest(int time){
+        System.out.println("Resting");
+        if(time < 12){
+            avaibleMPoints += MPoints / 2;
+            if(avaibleMPoints > MPoints){
+                avaibleMPoints = MPoints;
+            }
+        }
+        else {
+            avaibleMPoints = MPoints;
+        }
     }
 
     public String toString() {

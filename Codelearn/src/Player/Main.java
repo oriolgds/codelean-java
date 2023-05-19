@@ -17,12 +17,12 @@ public class Main {
         b2.gainXP(2000);
         wiz1.gainXP(2000);
         wiz2.gainXP(2000);
-        System.out.println(w1);
-        System.out.println(w2);
-        System.out.println(b1);
-        System.out.println(b2);
-        System.out.println(wiz1);
-        System.out.println(wiz2);
+        w1.toString();
+        w2.toString();
+        b1.toString();
+        b2.toString();
+        wiz1.toString();
+        wiz2.toString();
 
         System.out.println("Tanis is attacking enemy with DP 5");
         w1.attack(10);
@@ -34,8 +34,8 @@ public class Main {
         System.out.println("Tasslehoff is trying to disable a trap of difficulty 5");
         b2.disableTrap(5);
 
-        System.out.println(b1);
-        System.out.println(b2);
+        b1.toString();
+        b2.toString();
 
         System.out.println("Raistlin is trying to cast a spell of difficulty 10 with a cost of 1000");
         wiz1.castSpell(10, 1000);
@@ -44,7 +44,7 @@ public class Main {
         System.out.println("Gandalf is trying to cast a spell of difficulty 5 with a cost of 10");
         wiz2.castSpell(5, 10);
 
-        System.out.println(wiz1);
-        System.out.println(wiz2);
+        wiz1.toString();
+        wiz2.toString();
     }
 }

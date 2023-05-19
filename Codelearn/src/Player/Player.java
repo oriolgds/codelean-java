@@ -86,7 +86,7 @@ public abstract class Player {
         System.out.println("Character Name: " + this._characterName);
         System.out.println("Character Level: " + this.level);
         System.out.println("Character XP: " + this.XP);
-        System.out.println("Character HP" + this._HP);
+        System.out.println("Character HP: " + this._HP);
         return null;
     }
 }

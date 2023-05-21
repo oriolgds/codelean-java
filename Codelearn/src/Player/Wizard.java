@@ -27,12 +27,14 @@ public class Wizard extends Player{
         super(_playerName, _characterName);
         this.MP = BaseMP;
         this.MPoints = BaseMPoints;
+        this.avaibleMPoints = BaseMPoints;
     }
 
     Wizard(String _playerName, String _characterName, int _baseLevel, int _baseXP, int _baseHP, int MP, int MPoints) {
         super(_playerName, _characterName, _baseLevel, _baseXP, _baseHP);
         this.MP = MP;
         this.MPoints = MPoints;
+        this.avaibleMPoints = MPoints;
     }
 
     @Override
@@ -41,8 +43,8 @@ public class Wizard extends Player{
         int c = level * XP;
         if(c > level * 1000 * level / 2){
             level++;
-            MP++;
-            MPoints += 5;
+            this.MP++;
+            this.MPoints += 5;
             this._HP += 5;
         }
     }
@@ -55,12 +57,13 @@ public class Wizard extends Player{
             }
             else {
                 System.out.println("Spell casting failed");
+                return false;
             }
         }
         else {
             System.out.println("Not enough magical energy");
+            return false;
         }
-        return false;
     }
     public void rest(int time){
         System.out.println("Resting");

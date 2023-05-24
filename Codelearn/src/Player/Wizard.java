@@ -1,6 +1,6 @@
 package Player;
 
-public class Wizard extends Player{
+public class Wizard extends Player {
     public int getMP() {
         return MP;
     }

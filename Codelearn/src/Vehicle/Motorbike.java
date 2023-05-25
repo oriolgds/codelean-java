@@ -10,7 +10,7 @@ public class Motorbike implements Vehicle {
         if(this.speed < 0){
             this.speed = 0;
         }
-        return null;
+        return "The motorbike has slowed down and its current speed is " + this.speed + " km / h.";
     }
 
     @Override
@@ -19,9 +19,10 @@ public class Motorbike implements Vehicle {
         if(this.speed > maxSpeed){
             this.speed = maxSpeed;
         }
-        return null;
+        return "The motorbike has speed up and its current speed is " + this.speed + " km / h.";
     }
-    Motorbike(){
-
+    Motorbike(int engineCapacity, String model){
+        this.engineCapacity = engineCapacity;
+        this.model = model;
     }
 }

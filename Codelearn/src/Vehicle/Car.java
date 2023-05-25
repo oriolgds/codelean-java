@@ -11,7 +11,7 @@ public class Car implements Vehicle {
         if(this.speed < 0){
             this.speed = 0;
         }
-        return null;
+        return "The car has slowed down and its current speed is " + this.speed + " km / h.";
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Car implements Vehicle {
         if(this.speed > maxSpeed){
             this.speed = maxSpeed;
         }
-        return null;
+        return "The car has speed up and its current speed is " + this.speed + " km / h.";
     }
     Car(String type, String model, int power){
         this.type = type;

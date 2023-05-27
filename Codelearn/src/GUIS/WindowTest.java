@@ -14,7 +14,7 @@ public class WindowTest {
 
         JEditorPane website = null;
         try {
-            website = new JEditorPane("http://oriol.22web.org/");
+            website = new JEditorPane("https://oriolgds.github.io/adventure/");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

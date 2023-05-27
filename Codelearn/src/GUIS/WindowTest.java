@@ -1,18 +1,30 @@
 package GUIS;
 
 import javax.swing.*;
+import javax.swing.*;
+
+import java.awt.*;
+
+import java.awt.event.*;
+import java.io.IOException;
 
 public class WindowTest {
 
     public static void main ( String[] args) {
 
-        JFrame f = new JFrame( "Window title" );
+        JEditorPane website = null;
+        try {
+            website = new JEditorPane("http://oriol.22web.org/");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        website.setEditable(false);
 
-        f.setSize ( 400, 300 );
-
-        f.setDefaultCloseOperation ( JFrame.EXIT_ON_CLOSE );
-
-        f.setVisible ( true );
+        JFrame frame = new JFrame("Google");
+        frame.add(new JScrollPane(website));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.pack();
 
     }
 

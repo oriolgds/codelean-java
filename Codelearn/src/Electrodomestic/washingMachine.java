@@ -9,16 +9,16 @@ public class washingMachine extends Electrodomestic {
 	}
 	washingMachine(){
 		super();
-		this._load = 5;
+		_load = 5;
 	}
 	washingMachine(double price, double weight){
 		super(price, weight);
-		this._load = 5;
+		_load = 5;
 
 	}
 	washingMachine(double price, double weight, char energyConsumption, String color){
 		super(price, color, energyConsumption, weight);
-		this._load = 5;
+		_load = 5;
 
 	}
 	washingMachine(double price, String color, char energyConsumption, double weight, double load){

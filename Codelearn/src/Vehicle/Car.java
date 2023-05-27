@@ -2,9 +2,9 @@ package Vehicle;
 
 public class Car implements Vehicle {
     private int speed;
-    private String type;
-    private String model;
-    private int power;
+    private final String type;
+    private final String model;
+    private final int power;
     @Override
     public String slowDown(int quantity) {
         this.speed -= quantity;

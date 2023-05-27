@@ -10,9 +10,9 @@ interface Set {
 }
 
 class Stack implements Set {
-    private Object[] array;
+    private final Object[] array;
     private int counter;
-    private int maxSize;
+    private final int maxSize;
 
     public Stack(int maxSize) {
         this.maxSize = maxSize;

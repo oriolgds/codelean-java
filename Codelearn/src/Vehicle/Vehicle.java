@@ -1,8 +1,8 @@
 package Vehicle;
 
 public interface Vehicle {
-    final int maxSpeed = 120;
-    public String slowDown(int quantity);
-    public String speedUp(int quantity);
+    int maxSpeed = 120;
+    String slowDown(int quantity);
+    String speedUp(int quantity);
     
 }

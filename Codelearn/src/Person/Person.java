@@ -5,8 +5,8 @@ public class Person {
     public int _age;
     public String _IDCardNumber;
     public char _sex;
-    private double _weight;
-    private double _height;
+    private final double _weight;
+    private final double _height;
     Person(){
         _name = "Oriol";
         _age = 15;
@@ -65,12 +65,7 @@ public class Person {
         }
     }
     private boolean isLegalAge(){
-        if(_age >= 18){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return _age >= 18;
     }
     public void isLegalAgeToString(){
         String c = "Yes";

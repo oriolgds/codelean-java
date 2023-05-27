@@ -87,7 +87,7 @@ public class Electrodomestic {
     }
     String checkColor(String color){
         String[] colorsArray = {"white", "black", "red", "blue", "grey"};
-        List<String> colors = Arrays.asList(Arrays.toString(colorsArray));
+        List<String> colors = List.of(Arrays.toString(colorsArray));
         if(Objects.equals(color, "black") || Objects.equals(color, "red") || Objects.equals(color, "blue") || Objects.equals(color, "grey")){
             return color;
         } else {

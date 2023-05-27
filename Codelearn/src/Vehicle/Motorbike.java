@@ -2,8 +2,8 @@ package Vehicle;
 
 public class Motorbike implements Vehicle {
     private int speed;
-    private int engineCapacity;
-    private String model;
+    private final int engineCapacity;
+    private final String model;
     @Override
     public String slowDown(int quantity) {
         this.speed -= quantity;

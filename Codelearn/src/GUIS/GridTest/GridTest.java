@@ -10,13 +10,16 @@ public class GridTest extends JFrame {
         super.setVisible(true);
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container cp = getContentPane();
-        GridLayout gridLayout = new GridLayout(1, 3);
-        gridLayout.setHgap(5);
-        gridLayout.setVgap(5);
+        GridLayout gridLayout = new GridLayout(4, 3);
+        gridLayout.setHgap(15);
+        gridLayout.setVgap(15);
         cp.setLayout(gridLayout);
-        cp.add(new JButton("First button"));
-        cp.add(new JButton("Second button"));
-        cp.add(new JButton("Third button"));
+
+        String[] a = new String[]{"-", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ", "*", "+", "#"};
+        for (String b:
+             a) {
+            cp.add(new JButton(b));
+        }
 
     }
 }

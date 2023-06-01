@@ -32,28 +32,32 @@ public class Example4 extends JFrame {
 
         // Iniciar JCombo y definir contenido
         petList = new JComboBox(pets);
+        petList.addActionListener(new ChosenAnimal());
         panel.add(petList);
+
+        // Inicar JLabel (donde se muestra el resultado)
+        petPreference = new JLabel();
 
         // Añadir el panel al contenedor
         cp.add(panel);
-
-        class ChosenAnimal implements ActionListener {
-            @Override
-            public void actionPerformed ( ActionEvent e ) {
-
-                JComboBox cb = (JComboBox) e.getSource();
-
-                String petname = (String) cb.getSelectedItem();
-
-                petPreference.setText ( "Your favorite per is " + petname );
-
-            }
-        }
+        // Añadir el JLabel donde se muestra el resultado
+        cp.add(petPreference);
 
 
-
-
+        // Mostrar la pantalla
         setVisible(true);
+    }
+    class ChosenAnimal implements ActionListener {
+        @Override
+        public void actionPerformed ( ActionEvent e ) {
+
+            JComboBox cb = (JComboBox) e.getSource();
+
+            String petname = (String) cb.getSelectedItem();
+
+            petPreference.setText ( "Your favorite per is " + petname );
+
+        }
     }
 
     public static void main(String[] args) {

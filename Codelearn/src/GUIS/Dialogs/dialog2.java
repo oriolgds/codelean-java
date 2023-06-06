@@ -32,6 +32,7 @@ public class dialog2 extends JFrame {
     }
 
     public static void main(String[] args) {
+
         dialog2 d = new dialog2();
     }
 

@@ -24,7 +24,7 @@ public class dialog1 extends JFrame {
         setVisible(true);
     }
     public static void main(String[] args) {
-
+        dialog1 d = new dialog1();
     }
     private static class showDialog implements ActionListener {
         @Override

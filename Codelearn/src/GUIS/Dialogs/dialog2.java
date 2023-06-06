@@ -23,11 +23,17 @@ public class dialog2 extends JFrame {
         // Initialize attributes
         question = new JLabel("What's your name? ");
         bt = new JButton("Answer");
+        bt.addActionListener(new showDialog());
 
+        cp.add(question);
+        cp.add(bt);
 
         setVisible(true);
     }
 
+    public static void main(String[] args) {
+        dialog2 d = new dialog2();
+    }
 
     private class showDialog implements ActionListener {
         @Override

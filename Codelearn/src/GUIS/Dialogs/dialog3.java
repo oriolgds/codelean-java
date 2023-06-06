@@ -16,7 +16,7 @@ public class dialog3 extends JFrame {
         cp.setLayout(new FlowLayout());
 
         JButton btn = new JButton("Close window");
-
+        btn.addActionListener(new showDialog());
         cp.add(btn);
         setVisible(true);
     }

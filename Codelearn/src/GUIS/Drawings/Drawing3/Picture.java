@@ -32,11 +32,11 @@ public class Picture extends JPanel {
         this.repaint();
     }
     public void changeFontSize(String s){
-        if(s == "10"){
+        if(s.equals("10")){
             this.size = 10;
-        } else if (s == "20"){
+        } else if (s.equals("20")){
             this.size = 20;
-        } else if (s == "30") {
+        } else if (s.equals("30")) {
             this.size = 30;
         } else {
             this.size = 20;

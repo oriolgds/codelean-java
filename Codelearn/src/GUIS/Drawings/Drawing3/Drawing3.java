@@ -24,7 +24,7 @@ public class Drawing3 extends JFrame {
     private class btnSetTextEvent implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            (JButton) btn = (JButton) e.getSource();
+            JButton btn = (JButton) e.getSource();
         }
     }
 }

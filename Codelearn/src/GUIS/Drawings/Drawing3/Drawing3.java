@@ -40,6 +40,16 @@ public class Drawing3 extends JFrame {
         }
         cp.add(eastPanel, BorderLayout.EAST);
 
+        JPanel westPanel = new JPanel();
+        westPanel.setLayout(new GridLayout(3, 1));
+        String[] n2 = {"Red", "Black", "Green"};
+        for (String s : n2) {
+            JButton btn = new JButton(s);
+            btn.addActionListener(new btnSetColorEvent());
+            westPanel.add(btn);
+        }
+        cp.add(westPanel, BorderLayout.WEST);
+
 
         setVisible(true);
     }
@@ -60,7 +70,15 @@ public class Drawing3 extends JFrame {
             System.out.println("Font Size: " + s);
             picture.changeFontSize(s);
         }
-
+    }
+    private class btnSetColorEvent implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton btn = (JButton) e.getSource();
+            String s = btn.getText();
+            System.out.println("Color: " + s);
+            picture.setColor(s);
+        }
     }
 
 

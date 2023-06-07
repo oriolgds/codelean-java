@@ -16,14 +16,15 @@ public class Picture extends JPanel {
         this.size = 20;
     }
     public void setText(String text){
+        this.text = text;
         this.repaint();
     }
     public void setColor(String _color){
-        if(_color == "red"){
+        if(_color == "Red"){
             this.color = Color.RED;
-        } else if (_color == "black"){
+        } else if (_color == "Black"){
             this.color = Color.BLACK;
-        } else if(_color == "green"){
+        } else if(_color == "Green"){
             this.color = Color.GREEN;
         }
         else {
@@ -50,7 +51,7 @@ public class Picture extends JPanel {
         g.setColor(Color.WHITE);
         g.fillRect(10, 10, 130, 100);
         g.setColor(this.color);
-        g.setFont ( new Font ( "", Font.ITALIC, 20 ) );
+        g.setFont ( new Font ( "", Font.ITALIC, size ) );
         g.drawString(text, 15, 50);
     }
 }

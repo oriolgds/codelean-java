@@ -50,6 +50,7 @@ public class Drawing3 extends JFrame {
         }
         cp.add(westPanel, BorderLayout.WEST);
 
+        JButton btnClean = new JButton("Clean text");
 
         setVisible(true);
     }

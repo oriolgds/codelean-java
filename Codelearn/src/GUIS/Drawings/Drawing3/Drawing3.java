@@ -16,15 +16,24 @@ public class Drawing3 extends JFrame {
         cp.setLayout(new BorderLayout());
 
         JButton btnSetText = new JButton("Set text");
+        btnSetText.addActionListener(new btnSetTextEvent());
+
+        cp.add(btnSetText);
 
 
         setVisible(true);
     }
 
-    private class btnSetTextEvent implements ActionListener {
+    private static class btnSetTextEvent implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             JButton btn = (JButton) e.getSource();
+            String s = JOptionPane.showInputDialog ( btn.getParent (), "Insert text: " );
         }
+    }
+
+
+    public static void main(String[] args) {
+        new Drawing3();
     }
 }

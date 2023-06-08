@@ -22,8 +22,8 @@ public class Drawing3 extends JFrame {
 
         cp.add(btnSetText, BorderLayout.NORTH);
 
-        picture = new Picture("TEST");
-        picture.setText("TEST2");
+        picture = new Picture("");
+        picture.setText("");
 
         cp.add(picture, BorderLayout.CENTER);
 
@@ -51,7 +51,9 @@ public class Drawing3 extends JFrame {
         cp.add(westPanel, BorderLayout.WEST);
 
         JButton btnClean = new JButton("Clean text");
+        btnClean.addActionListener(new btnClearEvent());
 
+        cp.add(btnClean, BorderLayout.SOUTH);
         setVisible(true);
     }
 
@@ -79,6 +81,14 @@ public class Drawing3 extends JFrame {
             String s = btn.getText();
             System.out.println("Color: " + s);
             picture.setColor(s);
+        }
+    }
+    private class btnClearEvent implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            picture.setText("");
+            picture.changeFontSize("20");
+            picture.setColor("Green");
         }
     }
 

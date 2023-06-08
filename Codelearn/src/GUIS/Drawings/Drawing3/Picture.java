@@ -39,7 +39,8 @@ public class Picture extends JPanel {
             this.size = 20;
         } else if (s.equals("30")) {
             this.size = 30;
-        } else {
+        }
+        else {
             this.size = 20;
         }
         this.repaint();
